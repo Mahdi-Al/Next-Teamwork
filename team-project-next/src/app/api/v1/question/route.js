@@ -35,9 +35,6 @@ export async function POST(request) {
   }
 }
 
-
-
-
 // PATCH answer
 export async function PATCH(request) {
   try {
@@ -68,6 +65,36 @@ export async function PATCH(request) {
     disconnectDB();
     return new Response(
       JSON.stringify({ message: "Failed to update answers." }),
+      { status: 500, headers: { "Content-Type": "application/json" } }
+    );
+  } finally {
+    disconnectDB();
+  }
+}
+export async function DELETE(request) {
+  try {
+    await connectDB();
+    const { id } = await request.json(); // Expecting the ID to be sent in the request body
+
+    const deletedQuestion = await Question.findByIdAndDelete(id);
+
+    if (!deletedQuestion) {
+      return new Response(JSON.stringify({ message: "Question not found." }), {
+        status: 404,
+        headers: { "Content-Type": "application/json" },
+      });
+    }
+
+    revalidateTag("Questions"); // Optionally revalidate the cache if needed
+
+    return new Response(
+      JSON.stringify({ message: "Question deleted successfully." }),
+      { status: 200, headers: { "Content-Type": "application/json" } }
+    );
+  } catch (error) {
+    console.error("Error deleting question:", error);
+    return new Response(
+      JSON.stringify({ message: "Failed to delete question." }),
       { status: 500, headers: { "Content-Type": "application/json" } }
     );
   } finally {
