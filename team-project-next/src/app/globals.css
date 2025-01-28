@@ -1,56 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=League+Spartan:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=League+Spartan:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Barlow", serif;
-  font-style: normal
+  font-style: normal;
 }
-
 
 .header {
   position: fixed;
- top: 0;
+  top: 0;
   background-color: #0ea5e9;
   width: 100%;
-  height: 4rem; 
+  height: 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1.25rem; 
+  padding: 0 1.25rem;
 }
 
 .linksContainer {
   display: flex;
   align-items: center;
-  gap: 1.25rem; 
+  gap: 1.25rem;
 }
 
 .logo {
-  border-radius: 9999px; 
-  background-color: #0ea5e9; 
+  border-radius: 9999px;
+  background-color: #0ea5e9;
 }
 
 .link {
-  font-size: 0.80rem; 
+  font-size: 0.8rem;
   color: white;
   font-weight: 700;
   text-decoration: none;
 }
 
-
-
 .icon {
-  width: 2rem; 
-  height: 2rem; 
-  color: #302797; 
-  margin-right: 1rem; 
+  width: 2rem;
+  height: 2rem;
+  color: #302797;
+  margin-right: 1rem;
 }
 
 .question-container {
-  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,7 +55,6 @@
 .question-title {
   font-size: 3.1rem;
   font-weight: 500;
-
 }
 
 .question-search {
@@ -86,7 +80,7 @@
   color: #474747;
   font-weight: 600;
 }
-.flex{
+.flex {
   display: flex;
   gap: 27px;
 }
@@ -108,7 +102,6 @@
   color: #474747;
 }
 
-
 .question-item {
   width: 100%;
   justify-content: center;
@@ -116,7 +109,7 @@
   gap: 1rem;
   align-items: center;
 }
-.question-data{
+.question-data {
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -141,8 +134,9 @@
 
 .item-title {
   font-size: 1rem;
- font-weight: 600;
+  font-weight: 600;
   margin-bottom: 7px;
+  color: #333;
 }
 
 .item-description {
@@ -160,12 +154,10 @@
   color: #777;
 }
 
-
 .question-data:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
-
 
 .delete-button {
   display: flex;
@@ -185,10 +177,9 @@
 }
 
 .icon-delete-btn {
-width:20px ;
-height: 20px;
+  width: 20px;
+  height: 20px;
 }
-
 
 .loading-text,
 .error-text {
@@ -200,33 +191,31 @@ height: 20px;
 
 .error-text {
   color: #d32f2f;
-} 
+}
 
-
-.container{
+.container {
   display: flex;
   flex-direction: column;
 }
 .content {
-min-height: 70vh;
+  min-height: 70vh;
 }
 .footer-container {
   width: 100%;
-  height: 10rem; 
-  background-color: #0284c7; 
+  height: 10rem;
+  background-color: #0284c7;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: 4.75rem;
-  gap: 0.75rem; 
-
+  gap: 0.75rem;
 }
 
 .footer-text {
-  color: #ffffff; 
-  font-size: 1.125rem; 
-  font-weight: 500; 
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 500;
 }
 
 .footer-link {
@@ -237,12 +226,9 @@ min-height: 70vh;
 
 .footer-icon {
   color: #ffffff;
-  width: 1.5rem; 
+  width: 1.5rem;
   height: 1.5rem;
 }
-
-
-
 
 .page-container {
   display: flex;
@@ -278,7 +264,6 @@ min-height: 70vh;
   color: #27272a;
 }
 
-
 .answers-section {
   display: flex;
   flex-direction: column;
@@ -287,24 +272,24 @@ min-height: 70vh;
 
 .answers-title {
   font-size: 1.5rem;
-  font-weight:450;
+  font-weight: 450;
 }
-.answer-item{
-border: 2px solid rgb(235, 235, 235);
-display: flex;
-justify-content: space-between;
-padding: 35px 25px;
-border-radius: 7px;
-align-items: center;
+.answer-item {
+  border: 2px solid rgb(235, 235, 235);
+  display: flex;
+  justify-content: space-between;
+  padding: 35px 25px;
+  border-radius: 7px;
+  align-items: center;
 }
-.answer_input{
+.answer_input {
   font-size: medium;
   font-weight: 400;
-width: 90%;
-height: 130px;
-padding: 0 20px;
-border-radius: 7px;
-border: 2px solid rgb(235, 235, 235);
+  width: 90%;
+  height: 130px;
+  padding: 0 20px;
+  border-radius: 7px;
+  border: 2px solid rgb(235, 235, 235);
 }
 .answer_input:focus {
   border: 2px solid rgb(180, 180, 180) !important;
@@ -315,13 +300,13 @@ border: 2px solid rgb(235, 235, 235);
   outline: none !important;
 }
 .icon-delete-answer-btn {
-  width:20px ;
+  width: 20px;
   height: 20px;
-  color: rgb(107, 107, 107) ;
-  }
-  .icon-delete-answer-btn:hover{
-    color: #d32f2f;
-  }
+  color: rgb(107, 107, 107);
+}
+.icon-delete-answer-btn:hover {
+  color: #d32f2f;
+}
 
 .answer-input {
   width: 100%;
@@ -356,7 +341,6 @@ border: 2px solid rgb(235, 235, 235);
   background-color: #0369a1;
 }
 
-
 @media (max-width: 768px) {
   .main-content {
     width: 90%;
@@ -371,62 +355,56 @@ border: 2px solid rgb(235, 235, 235);
   }
 }
 
-.container-home{
+.container-home {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 120px;
   gap: 100px;
- 
 }
-.box1{
+.box1 {
   display: flex;
   gap: 70px;
   flex-wrap: wrap;
-
 }
 @media (max-width: 850px) {
-  .box1{
+  .box1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  
   }
-  .img-home{
+  .img-home {
     width: 300px;
   }
-  .box2{
-   width: 250px;
+  .box2 {
+    width: 250px;
   }
-
 }
 @media (min-width: 850px) {
-
-  .des-box{
+  .des-box {
     width: 500px;
- 
   }
 }
-.box2{
+.box2 {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.des-box{
+.des-box {
   font-size: medium;
   font-weight: 500;
-  color: #575757;
+  color: #9a9797;
 }
-.title-home{
+.title-home {
   font-size: 17px;
   font-weight: 500;
   color: #353535;
 }
-.h1-box1{
-font-size: 40px;
+.h1-box1 {
+  font-size: 40px;
 }
 
-.btn-box{
+.btn-box {
   text-decoration: none;
   background-color: #0284c7;
   width: 150px;
@@ -441,20 +419,19 @@ font-size: 40px;
   margin-top: 20px;
 }
 
-.box2-home{
+.box2-home {
   display: flex;
   flex-direction: column;
-justify-content: center;
-gap: 30px;
-width: 70%;
-
+  justify-content: center;
+  gap: 30px;
+  width: 70%;
 }
-.h1-box2{
+.h1-box2 {
   font-size: 40px;
   font-weight: 450;
   text-align: center;
 }
-.form{
+.form {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -471,13 +448,12 @@ width: 70%;
   border-radius: 0.3rem;
   transition: background-color 0.3s ease;
 }
-.err{
+.err {
   font-size: larger;
   color: #d32f2f;
   text-align: center;
   font-weight: 500;
 }
-
 
 .modal-overlay {
   position: fixed;
@@ -485,7 +461,7 @@ width: 70%;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);  
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -495,42 +471,104 @@ width: 70%;
 .modal {
   width: 90%;
   max-width: 500px;
-  background-color: #ffffff; 
-  border-radius: 8px; 
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
-  padding: 1.5rem; 
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
   position: relative;
-  animation: fadeIn 0.3s ease-out; 
+  animation: fadeIn 0.3s ease-out;
   display: flex;
   flex-direction: column;
   gap: 20px;
   font-size: larger;
   font-weight: 500;
 }
-.btn-modal{
+.btn-modal {
   display: flex;
   justify-content: flex-end;
   gap: 20px;
 }
-.about{
+.about {
   height: 100%;
   display: flex;
   margin-top: 200px;
-justify-content: center;
-
+  justify-content: center;
 }
-.about-box{
-width: 70%;
-display: flex;
-flex-direction: column;
-gap: 20px;
+.about-box {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.p-about{
-font-size: 15px;
-line-height: 20px;
-font-weight: 500;
-color: #303030;
+.p-about {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #9a9797;
 }
-.h1-about{
+.p-about.dark {
+  color: white;
+}
+.h1-about {
   font-size: 50px;
+}
+body.light {
+  background-color: white;
+  color: black;
+}
+
+input,
+textarea {
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc; /* Light border */
+}
+
+/* Dark theme styles */
+body.dark {
+  background-color: #121212; /* Dark background */
+  color: white; /* Light text */
+}
+
+input,
+textarea {
+  background-color: #333; /* Dark background for inputs */
+  color: white; /* Light text for inputs */
+  border: 1px solid #555; /* Darker border */
+}
+
+/* Additional styles for buttons, links, etc. */
+
+input,
+textarea {
+  padding: 10px; /* Add some padding */
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Light theme input styles */
+body.light input,
+body.light textarea {
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc; /* Light border */
+}
+
+/* Dark theme input styles */
+body.dark input,
+body.dark textarea {
+  background-color: #444; /* Darker background for inputs */
+  color: white; /* Light text for inputs */
+  border: 1px solid #666; /* Slightly lighter border */
+}
+
+/* Placeholder styles */
+input::placeholder,
+textarea::placeholder {
+  color: #aaa; /* Placeholder color */
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+  color: #888; /* Lighter placeholder color for dark mode */
 }

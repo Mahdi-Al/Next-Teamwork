@@ -17,19 +17,33 @@ export async function GET() {
   }
 }
 // POST a new Question
+// POST a new Question
 export async function POST(request) {
   try {
     await connectDB();
     const body = await request.json();
     const newQuestion = new Question(body);
-    await newQuestion.save();
+
+    // Save the new question
+    const savedQuestion = await newQuestion.save();
+
+    // Revalidate the cache
     revalidateTag("Questions");
-    return new Response(JSON.stringify(newQuestion), {
+
+    // Return the saved question along with timestamps
+    return new Response(JSON.stringify(savedQuestion), {
       headers: { "Content-Type": "application/json" },
+      status: 201, // HTTP status code for created
     });
   } catch (error) {
-    console.error("Error fetching Questions:", error);
-    disconnectDB();
+    console.error("Error saving question:", error);
+    return new Response(
+      JSON.stringify({
+        message: "Failed to save question.",
+        error: error.message,
+      }),
+      { status: 500, headers: { "Content-Type": "application/json" } }
+    );
   } finally {
     disconnectDB();
   }

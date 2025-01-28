@@ -1,9 +1,9 @@
 import "../app/globals.css";
 import Image from "next/image";
 import Link from "next/link";
-import { FaMoon } from "react-icons/fa";
+import { FaMoon, FaSun } from "react-icons/fa";
 
-export default function Header() {
+export default function Header({ toggleTheme, theme }) {
   const links = [
     { name: "HOME", path: "/" },
     { name: "QUESTIONS", path: "/questions" },
@@ -26,7 +26,15 @@ export default function Header() {
           </Link>
         ))}
       </div>
-      <FaMoon className="icon" />
+
+      <div onClick={toggleTheme} className="theme-toggle-button btn">
+        {theme === "light" ? (
+          <FaSun className="icon" />
+        ) : (
+          <FaMoon className="icon" />
+        )}{" "}
+        {/* Toggle icon */}
+      </div>
     </div>
   );
 }

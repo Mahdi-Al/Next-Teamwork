@@ -33,11 +33,9 @@ export default function Question() {
         const res = await fetch(`${API_URL}`, {
           method: "DELETE",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ id }), // Send the ID in the request body
+          body: JSON.stringify({ id }),
         });
-
         if (res.ok) {
-          // Refresh the questions after deletion
           fetchQuestions();
         } else {
           console.error("Failed to delete the question");
@@ -51,6 +49,21 @@ export default function Question() {
   useEffect(() => {
     fetchQuestions();
   }, []);
+
+  // Function to sort questions based on the selected filter
+  const sortedQaData = () => {
+    return qaData
+      .filter(
+        (item) =>
+          item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          item.description.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+      .sort((a, b) => {
+        const dateA = new Date(a.dateAdded);
+        const dateB = new Date(b.dateAdded);
+        return filter === "newer" ? dateB - dateA : dateA - dateB;
+      });
+  };
 
   return (
     <div className="question-container">
@@ -78,7 +91,7 @@ export default function Question() {
       ) : error ? (
         <p className="error-text">Error: {error.message}</p>
       ) : (
-        qaData.map((item) => (
+        sortedQaData().map((item) => (
           <div key={item._id} className="question-item">
             <div className="question-data">
               <Link href={`/questions/${item._id}`} className="question-link">
@@ -86,7 +99,7 @@ export default function Question() {
                   <h2 className="item-title">{item.title}</h2>
                   <p className="item-description">{item.description}</p>
                 </div>
-                <p className="item-date">ll</p>
+                <p className="item-date">{item.dateAdded}</p>
               </Link>
             </div>
             <button
